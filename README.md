@@ -41,7 +41,7 @@ Each folder contains Java solutions for problems of that rating. (right now at o
 
 ---
 
-## 📈 Progress
+## Progress
 
 * Solving problems regularly
 * Increasing difficulty over time
@@ -49,6 +49,6 @@ Each folder contains Java solutions for problems of that rating. (right now at o
 
 ---
 
-## 👨‍💻 Author
+## Author
 
 Aayush Mishra
