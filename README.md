@@ -21,7 +21,7 @@ codeforces/
 ├── ...
 ```
 
-Each folder contains Java solutions for problems of that rating. (right now at only 1100 but will keep on updating all of this)
+Each folder contains Java solutions for problems of that rating or solutions for a contest. (right now at only 1100 but will keep on updating all of this)
 ---
 
 ## Goal
