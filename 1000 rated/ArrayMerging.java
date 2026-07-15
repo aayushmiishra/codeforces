@@ -5,26 +5,47 @@ public class ArrayMerging {
         Scanner sc = new Scanner(System.in);
         int t = sc.nextInt();
         while (t-- > 0) {
-            int n = sc.nextInt();
-            int[] a = new int[n];
-            int[] b = new int[n];
-            int[] c = new int[2 * n];
-            for (int i = 0; i < n; i++) {
-                a[i] = sc.nextInt();
-                c[i] = a[i];
-            }for (int i = 0; i < n; i++) {
-                b[i] = sc.nextInt();
-                c[i + n] = b[i];
+            int n=sc.nextInt();
+            int[] a=new int[n];
+            int[] b=new int[n];
+            // int[] c=new int[2*n];
+            for (int i=0;i<n;i++) {
+                a[i]=sc.nextInt();
+                b[i]=sc.nextInt();
             }
-            Arrays.sort(c);
-            int maxLen = 1;
-            int len = 1;
-            for (int i = 1; i < 2 * n; i++) {
-                if (c[i] == c[i - 1]) len++;
-                else len = 1;
-                maxLen = Math.max(maxLen, len);
+            int[] travA=new int[2*n+1];
+            int[] travB=new int[2*n+1];
+            int i = 0;
+            while (i < n) {
+                int val = a[i];
+                int cnt = 0;
+
+                while (i < n && a[i] == val) {
+                    cnt++;
+                    i++;
+                }
+
+                travA[val] = Math.max(travA[val], cnt);
             }
-            System.out.println(maxLen);
+            i = 0;
+            while (i < n) {
+                int val = b[i];
+                int cnt = 0;
+
+                while (i < n && b[i] == val) {
+                    cnt++;
+                    i++;
+                }
+
+                travB[val] = Math.max(travB[val], cnt);
+            }
+            int ans = 0;
+
+            for (int val = 1; val <= 2 * n; val++) {
+                ans = Math.max(ans, travA[val] + travB[val]);
+            }
+            System.out.println(ans);
         }
+        sc.close();
     }
 }
