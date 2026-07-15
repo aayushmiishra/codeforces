@@ -1,4 +1,4 @@
-# Codeforces Pratice (Java)
+# Codeforces (Java)
 This repository contains my solutions to various **Codeforces problems** implemented in Java.
 
 ## Overview
